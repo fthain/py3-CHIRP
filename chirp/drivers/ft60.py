@@ -27,7 +27,7 @@ from textwrap import dedent
 
 LOG = logging.getLogger(__name__)
 
-ACK = "\x06"
+ACK = bytes(b"\x06")
 
 
 def _send(pipe, data):
@@ -38,7 +38,7 @@ def _send(pipe, data):
 
 
 def _download(radio):
-    data = ""
+    data = bytes(b"")
     for i in range(0, 10):
         chunk = radio.pipe.read(8)
         if len(chunk) == 8:
