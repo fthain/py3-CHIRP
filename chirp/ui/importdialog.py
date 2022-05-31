@@ -20,6 +20,7 @@ import logging
 
 from chirp import errors, chirp_common, import_logic
 from chirp.ui import common
+from chirp.ui import compat
 
 LOG = logging.getLogger(__name__)
 
@@ -299,7 +300,7 @@ class ImportDialog(gtk.Dialog):
         self.__view = gtk.TreeView(self.__store)
         self.__view.show()
 
-        tips = gtk.Tooltips()
+        tips = compat.CompatTooltips()
 
         for k in list(self.caps.keys()):
             t = self.types[k]
