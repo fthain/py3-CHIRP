@@ -409,7 +409,7 @@ class ImportDialog(gtk.Dialog):
         inv.show()
         hbox.pack_start(inv, 0, 0, 0)
 
-        frame = gtk.Frame(_("Select"))
+        frame = compat.Frame(_("Select"))
         frame.show()
         frame.add(hbox)
         hbox.show()
@@ -467,7 +467,7 @@ class ImportDialog(gtk.Dialog):
         revr.show()
         hbox.pack_start(revr, 0, 0, 0)
 
-        frame = gtk.Frame(_("Adjust New Location"))
+        frame = compat.Frame(_("Adjust New Location"))
         frame.show()
         frame.add(hbox)
         hbox.show()
@@ -483,7 +483,7 @@ class ImportDialog(gtk.Dialog):
 
         hbox.pack_start(confirm, 0, 0, 0)
 
-        frame = gtk.Frame(_("Options"))
+        frame = compat.Frame(_("Options"))
         frame.add(hbox)
         frame.show()
         hbox.show()
