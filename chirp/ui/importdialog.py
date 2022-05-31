@@ -51,13 +51,13 @@ class WaitWindow(gtk.Window):
 
     def grind(self):
         while gtk.events_pending():
-            gtk.main_iteration(False)
+            gtk.main_iteration()
 
         self.prog.pulse()
 
     def set(self, fraction):
         while gtk.events_pending():
-            gtk.main_iteration(False)
+            gtk.main_iteration()
 
         self.prog.set_fraction(fraction)
 

@@ -1327,7 +1327,7 @@ of file.
         # to make sure we process events leading up to this
         Gtk.Gdk.window_process_all_updates()
         while Gtk.events_pending():
-            Gtk.main_iteration(False)
+            Gtk.main_iteration()
 
         if do_import:
             eset = self.get_current_editorset()
